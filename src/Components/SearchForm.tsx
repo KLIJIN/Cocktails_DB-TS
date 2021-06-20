@@ -12,7 +12,7 @@ const SearchForm: React.FC = () => {
     searchValue.current?.focus()
   }, [])
 
-  function searchCocktail(e: React.ChangeEvent<HTMLInputElement>) {
+  function searchCocktail(e: React.ChangeEvent<HTMLInputElement>): void {
     setSearchTerm(e.target.value)
   }
 
@@ -25,8 +25,7 @@ const SearchForm: React.FC = () => {
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="cocktail777" style={{ letterSpacing: "0.06em" }} > Search  </label>
-          <input type="text" id="cocktail777" ref={searchValue}
-            onChange={searchCocktail} />
+          <input type="text" id="cocktail777" ref={searchValue} onChange={searchCocktail} />
         </div>
       </form>
     </section>
