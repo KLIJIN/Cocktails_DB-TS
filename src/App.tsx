@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/CocktailsDB_React_SPA">  <Home /> </Route>   {/* for Github Pages*/}
+        <Route exact path="/Cocktails_DB-TS">  <Home /> </Route>   {/* for Github Pages*/}
         <Route exact path="/"> <Home /> </Route>
         <Route path="/about"> <About /> </Route>
         <Route path="/cocktail/:id"> <SingleCocktail /> </Route>

@@ -2,4 +2,4 @@
 
 Реализованно на React, React-Router, Context API, TheCocktail DB
 
-Ссылка на [GitHub Pages](https://github.com/KLIJIN/Cocktails_DB-TS).
+Ссылка на [GitHub Pages](https://klijin.github.io/Cocktails_DB-TS/).
