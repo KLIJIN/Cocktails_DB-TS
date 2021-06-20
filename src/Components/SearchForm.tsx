@@ -12,7 +12,7 @@ const SearchForm: React.FC = () => {
     searchValue.current?.focus()
   }, [])
 
-  function searchCocktail(e: React.ChangeEvent<HTMLInputElement>): void {
+  const searchCocktail = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchTerm(e.target.value)
   }
 
