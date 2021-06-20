@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useContext } from 'react'
 import { AppContext } from "../context"
 
 
-
 const SearchForm: React.FC = () => {
 
   const { setSearchTerm } = useContext(AppContext)
@@ -13,8 +12,8 @@ const SearchForm: React.FC = () => {
     searchValue.current?.focus()
   }, [])
 
-  function searchCocktail() {
-    setSearchTerm(searchValue.current?.value!)
+  function searchCocktail(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearchTerm(e.target.value)
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
@@ -26,7 +25,8 @@ const SearchForm: React.FC = () => {
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="cocktail777" style={{ letterSpacing: "0.06em" }} > Search  </label>
-          <input type="text" id="cocktail777" ref={searchValue} onChange={searchCocktail} />
+          <input type="text" id="cocktail777" ref={searchValue}
+            onChange={searchCocktail} />
         </div>
       </form>
     </section>

@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
+
 import { newCocktail, fetchingCoctail } from "./types"
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
@@ -62,12 +63,7 @@ const AppProvider: React.FC = ({ children }) => {
   }, [searchTerm])
 
   return (
-    <AppContext.Provider value={{
-      loading: loading,
-      searchTerm: searchTerm,
-      cocktails: cocktails,
-      setSearchTerm: setSearchTerm
-    }} >
+    <AppContext.Provider value={{ loading, searchTerm, cocktails, setSearchTerm }} >
       {children}
     </AppContext.Provider>
   )
